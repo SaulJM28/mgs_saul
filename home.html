@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gracoil</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./static/css/style2.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h5>MGS</h5><br/>
+          <a class="link-perfil" href="./Perfil/miPerfil.php/"><i class="fas fa-user"></i> Nombre del usuario</a>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li>
+            <a
+              href="#Dashboard"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              Dashboard</a
+            >
+            <ul class="collapse list-unstyled" id="Dashboard">
+              <li>
+                <a href="/Dashboard/dashboard_gen.html">Dashboard General</a>
+              </li>
+              <li>
+                <a href="#">Dashboard Gracoil</a>
+              </li>
+              <li>
+                <a href="#">Dashboard Inter</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#datoscliente"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i class="fas fa-users"></i> Datos Clientes</a
+            >
+            <ul class="collapse list-unstyled" id="datoscliente">
+              <li>
+                <a href="#">Gracoil</a>
+              </li>
+              <li>
+                <a href="#">Inter</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#desccliente"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i class="fas fa-money-bill"></i> Descuentos Clientes</a
+            >
+            <ul class="collapse list-unstyled" id="desccliente">
+              <li>
+                <a href="#">Gracoil</a>
+              </li>
+              <li>
+                <a href="#">Inter</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="#estservicio"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              ><i class="fas fa-truck-moving"></i> Estación servicios</a
+            >
+            <ul class="collapse list-unstyled" id="estservicio">
+              <li>
+                <a href="#">Gracoil</a>
+              </li>
+              <li>
+                <a href="#">Inter</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+      <!-- Page Content  -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-inverse fixed-top" style="background-color: #3e4144;">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i
+                class="fas fa-align-left"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+            </button>
+            <button
+              class="btn btn-dark d-inline-block d-lg-none ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-align-justify"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link link-nav-top" href="home.html" style="color: white; margin: 0px 0px 0px 5px;"
+                    >Inicio</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid" style="margin-top: 50px; background-color: rgb(255, 255, 255); padding: 1rem; border-radius: 8px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.634);">
+          <div class="row">
+            <div class="col col-sm-12 ieps">
+              <marquee>IEPS Gasolina menor a 91 octanos 48.4720 ¢ X LT ------------ IEPS Gasolina mayor o igual a 91 octanos 59.1449 ¢ X LT ------------ IEPS Diésel 40.2288 ¢ X LT</marquee>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col col-sm-12">
+              <h4 style="text-align: center">Todos los modulos</h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-sm-12" style="text-align: left;">
+              <h4>Modulo 1</h4>
+            </div>
+          </div>
+
+          <div class="row justify-content-md-center">
+            <div class="col-md-12" style="display: flex; justify-content:center;">
+              <ul class="navega">
+                <li class="modulo_item" id="precios_card">Precios</li>
+                <li class="modulo_item" id="inventarios_card">inventarios</li>
+                <li class="modulo_item" id="facturacion_card">Facturación</li>
+                <li class="modulo_item" id="compras_card">Compras</li>
+                <li class="modulo_item" id="cobranza_card">Cobranza</li>
+              </ul>
+            </div>
+          </div>
+              <!--Card de Precio-->
+              <div class="row ">
+                <div class="col col-sm-12">
+                  <div class="card" id="precios_card_content" style="display: none">
+                    <div class="card-header card_encabezado" ><H6>Precios</H6></div>
+    
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-3">
+    
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header" style="font-size: 12px;">Alta de precios</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Alta de precios
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Historial de precios
+                              </button>
+                            </div>
+                          </div>
+    
+                        </div>
+    
+                        <div class="col-md-3">
+    
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Precios diarios</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Promedio municipio
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Precios diarios
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Promedio municipio
+                              </button>
+                            </div>
+                          </div>
+    
+                        </div>
+    
+                        <div class="col-md-3">
+    
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Precios de salida</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Precios salida
+                              </button>
+                            </div>
+                          </div>
+    
+                        </div>
+    
+                        <div class="col-md-3">
+    
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Precios de referencia</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Precios Referencia
+                              </button>
+                            </div>
+                          </div>
+    
+                        </div>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card de Inventario-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card" id="inventarios_card_content" style="display: none">
+                    <div class="card-header card_encabezado">Inventarios</div>
+    
+                    <div class="card-body">
+                      <div class="row g-3">
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Reporte de tanques y cuenta litros
+                            </div>
+                            <div class="card-body">
+                              <a
+                                href="./Inventarios/ReporteDeTanquesCuentaLitros/ReporteInfraestructura.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </a>
+                              <a
+                                href="./Inventarios/ReporteDeTanquesCuentaLitros/ReporteActivoFijo.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Activo Fijo
+                            </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Entradas</div>
+                            <div class="card-body">
+                              <a
+                                href="./Inventarios/Entradas/entradas_mat_pen.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                            </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Entrega sin Factura Cliente
+                            </div>
+                            <div class="card-body">
+                              <a
+                                href="./Inventarios/EntregaSinFacturaCliente/disel.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Disel
+                              </a>
+                              <a
+                                href="./Inventarios/EntregaSinFacturaCliente/alterno.php"
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Alterno
+                              </a>
+                              <a
+                                href="./Inventarios/EntregaSinFacturaCliente/gasolina.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Gasolina
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Cruce de Entrada VS Factura P
+                            </div>
+                            <div class="card-body">
+                              <a
+                                href="./Inventarios/CruceEntradaVSFacturaProve/CruceEntradaVSFacturaProve.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                            </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <br />
+                      <div class="row g-3">
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Factura Proveedor sin Entrada
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Trazabilidad</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                comprar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">Sellos</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Cruce de Entrada VS Factura P
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+    
+                      <div class="row g-3">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header">
+                              Pedidos sin entrada de mercancia
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                      </div>
+                    </div>
+    
+                  </div>
+                </div>
+              </div>
+              <!--Card de Facturación-->
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <div class="card" id="facturacion_card_content" style="display: none;">
+                    <div class="card-header card_encabezado" >Facturación</div>
+    
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Tabulador de fletes
+                            </div>
+                            <div class="card-body">
+                              <a
+                                href="./Facturas/TabuladordeFletes/tabuFletes.php"
+                                class="btn btn-sm btn-secondary"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                            </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >Pedido sin factura Cliente</div>
+                            <div class="card-body">
+                              <a href="./Facturas/PedidoSinFacturaCliente/pedSinFactClienDisel.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Disel
+                              </a>
+                              <a href="./Facturas/PedidoSinFacturaCliente/pedSinFactClienAlterno.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Alterno
+                              </a>
+                              <a href="./Facturas/PedidoSinFacturaCliente/pedSinFactClienGasolina.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Gasolina
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Factura cliente sin entrega
+                            </div>
+                            <div class="card-body">
+                              <a href="./Facturas/FacturaClienteSinEntrega/facturaClienteSinEntrega.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;"> Ver</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Cancelar Documentos
+                            </div>
+                            <div class="card-body">
+                              <a href="./Facturas/CancelarDocumentos/cancelarDocumento.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;"> Ver</a>
+                            </div>
+                          </div>
+                        </div>
+    
+
+                      </div>
+    
+                      <br />
+                      <div class="row g-4">
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Cruce de Entrega VS Factura Cliente
+                            </div>
+                            <div class="card-body">
+                              <a href="./Facturas/CruceDeEntregaVSFacturaCliente/cruce_entrega_vs_facturado_cliente.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;"> Ver</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Facturas de fletes transportes
+                            </div>
+                            <div class="card-body">
+                              <a href="./Facturas/FacturasFletesTransportes/factura_fletes_trans.php" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                ver
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Cartas porte</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Generar
+                              </button>
+                              <a
+                                href="./Facturas/CartasPorte/historial.php"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Historial
+                            </a>
+                              <button
+                              type="button"
+                              class="btn btn-secondary btn-sm"
+                              style="margin: 1px; width: 100%; font-size: 12px;"
+                            >
+                              Sin Fcatura SAP
+                            </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Facturas de traslado</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Crear
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                      <br />
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Facturas de ingreso
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Crear
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Historial
+                            </div>
+                            <div class="card-body">
+                              <a type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;" href="./Facturas/Historial/disel.php">Disel</a>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">Alternos</button>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">Nota de Credito</button>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">Fletes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card de Compras-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card" id="compras_card_content" style="display: none;">
+                    <div class="card-header card_encabezado" >Compras</div>
+    
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Saldos Proveedores
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-sm btn-secondary"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >Cuentas por Pagar</div>
+                            <div class="card-body">
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Proyeccion
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Saldo Diarios
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Historial
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Facturas
+                              </button>
+                              <button
+                              type="button"
+                              class="btn btn-secondary btn-sm"
+                              style="margin: 1px; width: 100%; font-size: 12px;"
+                            >
+                              Notas de Credito
+                            </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <br />
+                      <div class="row g-3">
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Reporte CRE
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Facturas
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Entrada sin Factura Proveedor</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Pedido sin Factura Proveedor</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card de cobranza -->
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <div class="card" id="cobranza_card_content" style="display: none;">
+                    <div class="card-header card_encabezado" >Cobranza</div>
+    
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Saldos Clientes
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-sm btn-secondary"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >Cuentas por Cobrar</div>
+                            <div class="card-body">
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Proyeccion
+                              </button>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Reporte Diario
+                              </button>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Reporte Semanal
+                              </button>
+                              <button type="button" class="btn btn-secondary btn-sm" style="margin: 1px; width: 100%; font-size: 12px;">
+                                Reporte Mensual
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado" >
+                              Identificar Pago
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Complementos de pago
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Generar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <br />
+                      <div class="row g-3">
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">
+                              Datos generales clientes
+                            </div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Gracoil
+                              </button>
+                              <button
+                              type="button"
+                              class="btn btn-secondary btn-sm"
+                              style="margin: 1px; width: 100%; font-size: 12px;"
+                            >
+                              Interamericana
+                            </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Comportamiento</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Lts Pagados
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Dias de Atraso
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Entrega vs Factura Dias
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header factura_encabezado">Consumos</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Consumos
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grupo de modulo 2-->
+              <div class="row">
+                <div class="col-md-12" style="text-align: left;">
+                  <h4>Módulo 2</h4>
+                </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <div class="col-md-12" style="display: flex; justify-content:center;">
+                  <ul class="navega">
+                    <li class="modulo_item" id="bancos_card">Bancos</li>
+                    <li class="modulo_item" id="contabilidad_card">Contabilidad</li>
+                    <li class="modulo_item" id="kpis_card">KPI'S</li>
+                    <li class="modulo_item" id="rh_card">RH</li>
+                    <li class="modulo_item" id="transportes_card">Transportes</li>
+                    <li class="modulo_item" id="TI_card" >T.I</li>
+                    <li class="modulo_item" id="ventas_card">Ventas</li>
+                  </ul>
+                </div>
+              </div>
+                <!--Card de Bancos-->
+                <div class="row">
+                  <div class="col col-sm-12">
+                    <div class="card" id="bancos_card_content" style="display: none">
+                      <div class="card-header card_encabezado" ><H6>Bancos</H6></div>
+      
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col col-sm-4">
+      
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header" style="font-size: 12px;">Reporte Bancos</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Egresos V3
+                                </button>
+                              </div>
+                            </div>
+      
+                          </div>
+      
+                          <div class="col col-sm-4">
+      
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Soporte Banco X Semana</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Egresos X Semana
+                                </button>
+                              </div>
+                            </div>
+      
+                          </div>
+      
+                          <div class="col col-sm-4">
+      
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Reporte Banco X Mes</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Egresos X Mes
+                                </button>
+                              </div>
+                            </div>
+      
+                          </div>
+      
+                        
+      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!--Card de Bancos-->
+                 <div class="row">
+                  <div class="col col-sm-12">
+                    <div class="card" id="contabilidad_card_content" style="display: none">
+                      <div class="card-header card_encabezado" ><H6>Contabilidad</H6></div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header" style="font-size: 12px;">Reporte de Partidas abiertas</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Pedido de Compra
+                                </button>
+                                <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Pedido de Venta
+                              </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Reporte SGS</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Comp. Pago FIVI</div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Inv. Diario
+                              </div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Pedido VS Factura Cliente
+                              </div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver
+                                </button>
+                                <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Estadistiicas
+                              </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Reporte proyectos
+                              </div>
+                              <div class="card-body">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Gracoil
+                                </button>
+                                <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Carburantes
+                              </button>
+                              <button
+                              type="button"
+                              class="btn btn-secondary btn-sm"
+                              style="margin: 1px; width: 100%; font-size: 12px;"
+                            >
+                              2VC
+                            </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Formato Movimientos Extemporaneoss
+                              </div>
+                              <div class="card-body">
+                                <a
+                                  href="./Contabilidad/FormatoMoviExtemp/FormatoMoviExtemp.php"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver
+                              </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-3">
+                            <div class="card card_box" style="height: 220px">
+                              <div class="card-header">Actividades de contabilidad
+                              </div>
+                              <div class="card-body">
+                                <a
+                                  href="./Contabilidad/listaActividades/lista_actividades.php"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Ver lista de actividades
+                              </a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <!--Card de KPI'S-->
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <div class="card" id="kpis_card_content" style="display: none;">
+                        <div class="card-header card_encabezado" ><H6>KPi'S</H6></div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col col-sm-4"></div>
+                            <div class="col col-sm-4">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Reporte de KPI'S</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Card de RH-->
+                  <div class="row">
+                    <div class="col col-md-12">
+                      <div class="card" id="rh_card_content" style="display: none;">
+                        <div class="card-header card_encabezado" ><H6>Recursos Humanos</H6></div>
+                        <div class="card-body">
+                          <div class="row g-3">
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Empleados</div>
+                                <div class="card-body">
+                                  <a
+                                    href="./RecursosHumanos/RH/lista_empleados.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver lista de empleados
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Expediente clinico</div>
+                                <div class="card-body">
+                                  <a
+                                  href="./RecursosHumanos/ExpedienteClinico/expediente_clinico.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Crear Expediente
+                                  </a>
+                                  <a
+                                  href="./RecursosHumanos/ExpedienteClinico/lista_peso_talla.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Lista Peso / Tallas
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Salarios</div>
+                                <div class="card-body">
+                                  <a
+                                    href="./RecursosHumanos/Salarios/lista_salarios_empleados.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Salarios Empleados
+                                  </a>
+                                  <a
+                                    href="./RecursosHumanos/Salarios/lista_salarios_empleado.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Salario Empleado
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Puestos / Áreas</div>
+                                <div class="card-body">
+                                  <a
+                                    href="./RecursosHumanos/Areas/lista_areas.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Lista de Puestos/Áreas
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;"> Empresas </div>
+                                <div class="card-body">
+                                  <a
+                                    href="./RecursosHumanos/Empresas/lista_empresas.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Lista de Empresas
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;"> Ubicaciones </div>
+                                <div class="card-body">
+                                  <a
+                                    href="./RecursosHumanos/Ubicaciones/lista_ubicaciones.php"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Lista de Ubicaciones
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <!--Card de transportes-->
+                   <div class="row">
+                    <div class="col col-sm-12">
+                      <div class="card" id="transportes_card_content" style="display: none;">
+                        <div class="card-header card_encabezado" ><H6>Transportes</H6></div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col col-sm-6">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Expediente Operadores</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-6">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Consumo de combustible</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--T.I-->
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      <div class="card" id="TI_card_content" style="display: none;">
+                        <div class="card-header card_encabezado" ><H6>T.I</H6></div>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col col-sm-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Reportes Desarrollos</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Desarrollos
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Comisiones Gracoil
+                                  </button>
+                                  <button
+                                  type="button"
+                                  class="btn btn-secondary btn-sm"
+                                  style="margin: 1px; width: 100%; font-size: 12px;"
+                                >
+                                  Comisiones Inter
+                                </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Reporte de Ventas</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    V2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Tareas a Realizar</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-3">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Prospecto</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br/>
+                          <div class="row">
+                            <div class="col col-sm-6">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Dashboard Tickets</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col-sm-6">
+                              <div class="card card_box" style="height: 220px">
+                                <div class="card-header" style="font-size: 12px;">Folios</div>
+                                <div class="card-body">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Ver
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!--Ventas-->
+                    <div class="row">
+                      <div class="col col-sm-12">
+                        <div class="card" id="ventas_card_content" style="display: none;">
+                          <div class="card-header card_encabezado" ><H6>Ventas</H6></div>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Reporte de ventas</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      P.Ventas VS P.Salida
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Ver
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Promedio de compra x cliente</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Ver
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Expediente de cliente</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Ver
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Crear memo de cliente</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Crear
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Historial
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Pre registro de cliente</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Crear
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Documentos
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Solicitar Credito</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Ver
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Facturas de contado</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Ver
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-sm-3">
+                                <div class="card card_box" style="height: 220px">
+                                  <div class="card-header" style="font-size: 12px;">Seguimiento de venta</div>
+                                  <div class="card-body">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Disel
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary btn-sm"
+                                      style="margin: 1px; width: 100%; font-size: 12px;"
+                                    >
+                                      Gasolina
+                                    </button>
+                                    <button
+                                    type="button"
+                                    class="btn btn-secondary btn-sm"
+                                    style="margin: 1px; width: 100%; font-size: 12px;"
+                                  >
+                                    Alterno
+                                  </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+              <!-- Grupo de modulo 3-->
+              <div class="row">
+                <div class="col col-sm-12" style="text-align: left;">
+                  <h4>Módulo 3</h4>
+                </div>
+              </div>
+              <div class="row justify-content-md-center">
+                <div class="col-md-12" style="display: flex; justify-content:center;">
+                  <ul class="navega">
+                    <li class="modulo_item" id="utilidades_card">Utilidades</li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <!--Utilidades-->
+              <div class="row">
+                <div class="col col-sm-12">
+                  <div class="card" id="utilidades_card_content" style="display: none;">
+                    <div class="card-header card_encabezado" ><H6>Utilidades</H6></div>
+                    <d  iv class="card-body">
+                      <div class="row">
+                        <div class="col col-sm-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header" style="font-size: 12px;">Consultar Codigos Postales</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Consultar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-sm-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header" style="font-size: 12px;">Documentos Fiscales</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Consultar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-sm-4">
+                          <div class="card card_box" style="height: 220px">
+                            <div class="card-header" style="font-size: 12px;">Tabulador de Fletes</div>
+                            <div class="card-body">
+                              <button
+                                type="button"
+                                class="btn btn-secondary btn-sm"
+                                style="margin: 1px; width: 100%; font-size: 12px;"
+                              >
+                                Ver
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                    
+        </div>
+      </div>
+    </div>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./static/js/home.js"></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+/*     background: url('../../static/imagenes/fondo.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    background-color: #b5bac9;
+}
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 12px;
+}
+.navbar {
+    padding: 15px 10px;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.994);
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+.ieps{
+    text-align: center;  
+    padding: 10px;
+    overflow: auto;
+    border-radius:8px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+#sidebar {
+    margin-top: 60px;
+    width: 190px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background-color: #3e4144;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar .sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background: url('../../static/imagenes/fondo-sidebar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #8c8c8c;
+    height: 100px;
+}
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    font-size: 12px;
+}
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 12px;
+    display: block;
+
+}
+#sidebar ul li a:hover {
+    color: #ffffff;
+    background: #65727c;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #65727c;
+    font-size: 12px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #535b61;
+    font-size: 12px;
+}
+ul.CTAs {
+    padding: 20px;
+}
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.link-nav-top:hover{
+    background: #65727c;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.link-nav-top-active{
+    background: #65727c;
+    border-radius: 8px;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 180px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content.active {
+    width: 100%;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+.card_box:hover{
+    transition: all 0.3s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+.navega{
+    overflow: auto;
+    background-color: #3e4144;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow:0px 0px 1px  rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+ul.navega li {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+.modulo_item:hover{
+    transition: all 0.3s;
+    text-decoration: underline;
+    color:#ffffff;
+    cursor: pointer;
+}
+.link_card_modulos{
+    text-align: center;
+    font-size: 15px;
+    width: 120px;
+    height: 120px;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
+}
+.link_card_modulos:hover{
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
+}
+.card_encabezado{
+    background-color: #535b61; 
+    color: #fff;
+    font-size: 16px;
+}
+/*--------------------------------------------------- 
+            DASHBOARD STYLES
+----------------------------------------------------*/
+
+/*------------------------------------
+        Estilos tabla
+------------------------------------*/
+.estilo_tabla thead{
+   background-color:#535b61;
+   color: white;
+   
+}
+.estilo_tabla th{
+    font-size: 12px;
+}
+.estilo_tabla tbody td{
+    font-size: 12px; 
+}
+/*------------------------------------
+        Estilos tabla datatable
+------------------------------------*/
+/* #myTableGracoil tbody tr.selected {
+    color: rgb(255, 255, 255) !important;
+    background-color: #338ef6 !important;
+}
+
+#myTableGracoil tbody tr {
+    cursor: pointer !important;
+}
+#myTableFiltradaGracoil tbody tr.selected {
+    color: rgb(255, 255, 255) !important;
+    background-color: #338ef6 !important;
+} */
+#myTableFiltradaGracoil tbody tr {
+    cursor: pointer !important;
+}
+
+
+
+/* Botones personaloizados para datatable*/
+.btn-excel {
+    background-color: #28a745  !important;
+    color: white !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-excel i{
+    font-size: 20px;
+  }
+
+.btn-pdf {
+    background-color: #dc3545 !important;
+    color: white !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-pdf i{
+    font-size: 20px;
+  }
+
+
+  .btn-csv {
+    background-color: #28a745 !important;
+    color: rgb(255, 255, 255) !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-csv i{
+    font-size: 20px;
+  }
+
+  .btn-copiar {
+    background-color: #ffc107!important;
+    color: rgb(255, 255, 255) !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-copiar i{
+    font-size: 20px;
+  }
+
+
+  .btn-ocultar {
+    background-color: #17a2b8 !important;
+    color: rgb(255, 255, 255) !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-ocultar i{
+    font-size: 20px;
+  }
+
+ 
+  .btn-imprimir {
+    background-color: #6c757d !important;
+    color: rgb(255, 255, 255) !important;
+  
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .btn-imprimir i{
+    font-size: 20px;
+  }
+
+
+  .dt-buttons{
+      margin-bottom: 5px;
+      margin-right: 5px;
+  }
+
+  .dt-button:hover{
+      transition: all 0.2s;
+    transform: scale(1.1);
+  }
+
+  table.dataTable thead th, table.dataTable thead td {
+    padding: 5px;
+}
+  
+  table.dataTable tfoot th, table.dataTable tfoot td{
+    padding: 5px;
+  }
+
+/* estilo de mi perfil */
+
+.link-perfil:hover{
+    text-decoration: underline;
+}
+
+
+.circular--portrait {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+    border:2px solid #3e4144;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .circular--portrait img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .datos_empleados{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }

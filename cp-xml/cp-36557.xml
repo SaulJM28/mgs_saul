@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/CartaPorte20 http://www.sat.gob.mx/sitio_internet/cfd/CartaPorte/CartaPorte20.xsd" xmlns:cartaporte20="http://www.sat.gob.mx/CartaPorte20" Version="3.3" Serie="A" Folio="36557" Fecha="2022-01-21T16:29:38" FormaPago="99" SubTotal="5442.00" Moneda="MXN" TipoCambio="1" Total="6095.04" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="06010" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<cfdi:Emisor Rfc="COVN620831N77"  Nombre="NINOTCHSKA COSTA VALCARCEL"  RegimenFiscal="612"/>
+<cfdi:Receptor  UsoCFDI="G03"  Rfc="IAL020924I42" Nombre="INTERAMERICANA DE ACEITES Y LUBRICANTES, S.A. DE C.V."/>
+<cfdi:Conceptos>
+<cfdi:Concepto ClaveProdServ="78121603" NoIdentificacion="01" Cantidad="20000"  ClaveUnidad="E48" Unidad="SERVICIO" Descripcion="FLETE DIESEL" ValorUnitario="0.2721" Importe="5442.00">
+<cfdi:Impuestos>
+<cfdi:Traslados>
+<cfdi:Traslado Base="5442.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="870.72"/>
+</cfdi:Traslados>
+<cfdi:Retenciones>
+<cfdi:Retencion Base="5442.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.040000" Importe="217.68"/>
+</cfdi:Retenciones>
+</cfdi:Impuestos>
+</cfdi:Concepto>
+</cfdi:Conceptos>
+<cfdi:Impuestos TotalImpuestosRetenidos="217.68" TotalImpuestosTrasladados="870.72" >
+<cfdi:Retenciones>
+<cfdi:Retencion  Impuesto="002" Importe="217.68"/>
+</cfdi:Retenciones>
+<cfdi:Traslados>
+<cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="870.72"/>
+</cfdi:Traslados>
+</cfdi:Impuestos>
+<cfdi:Complemento>
+<cartaporte20:CartaPorte Version="2.0" TranspInternac="No" TotalDistRec="135">
+<cartaporte20:Ubicaciones>
+<cartaporte20:Ubicacion IDUbicacion="OR000008" TipoUbicacion="Origen" RFCRemitenteDestinatario="IAL020924I42" FechaHoraSalidaLlegada="2022-01-21T14:27:00">
+<cartaporte20:Domicilio Calle="Carretera La Barca-San Miguel" NumeroExterior="km 61" Colonia="1805"   Municipio="008" Estado="JAL" Pais="MEX" CodigoPostal="47196" />
+</cartaporte20:Ubicacion>
+<cartaporte20:Ubicacion IDUbicacion="DE000372" TipoUbicacion="Destino" RFCRemitenteDestinatario="GGC0303259Y6" FechaHoraSalidaLlegada="2022-01-21T20:27:00" DistanciaRecorrida="135">
+<cartaporte20:Domicilio Calle="ACUEDUCTO" NumeroExterior="700" Colonia="1385"   Municipio="044" Estado="JAL" Pais="MEX" CodigoPostal="45850" />
+</cartaporte20:Ubicacion>
+</cartaporte20:Ubicaciones>
+<cartaporte20:Mercancias PesoBrutoTotal="10000" UnidadPeso="LTR" NumTotalMercancias="1">
+<cartaporte20:Mercancia BienesTransp="15101505" Descripcion="DIESEL" Cantidad="10000" ClaveUnidad="LTR" PesoEnKg="10000" MaterialPeligroso="Sí" CveMaterialPeligroso="1202" Embalaje="Z01">
+<cartaporte20:CantidadTransporta Cantidad="10000" IDOrigen="OR000008" IDDestino="DE000372"/>
+</cartaporte20:Mercancia>
+<cartaporte20:Autotransporte PermSCT="TPAF03" NumPermisoSCT="1501COVN16082011230301027">
+<cartaporte20:IdentificacionVehicular ConfigVehicular="C3" PlacaVM="091EV5" AnioModeloVM="2009" />
+<cartaporte20:Seguros AseguraRespCivil="QUALITAS Compañía de seguros" PolizaRespCivil="0210056468" AseguraCarga="CHUBB Compañía de seguros"  PolizaCarga="21164" AseguraMedAmbiente="QUALITAS Compañía de seguros" PolizaMedAmbiente="0210056468"/>
+</cartaporte20:Autotransporte>
+</cartaporte20:Mercancias>
+<cartaporte20:FiguraTransporte>
+<cartaporte20:TiposFigura NombreFigura="GUSTAVO NOE TAMAYO NAVARRO" TipoFigura="01" RFCFigura="TAGU731111RD6" NumLicencia="JAL0071434">
+</cartaporte20:TiposFigura>
+</cartaporte20:FiguraTransporte>
+</cartaporte20:CartaPorte>
+</cfdi:Complemento>
+</cfdi:Comprobante>
